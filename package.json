@@ -1,0 +1,42 @@
+{
+  "name": "gingabulous-frontend",
+  "version": "0.1.0",
+  "description": "A set of frontend styles that don't get in the way, but go a long way with structure and formatting.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeyred/gingabulous-frontend.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "responsive",
+    "grid",
+    "mobile",
+    "first"
+  ],
+  "author": "Joey Hayes <bjoeyhayes@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/joeyred/gingabulous-frontend/issues"
+  },
+  "homepage": "https://github.com/joeyred/gingabulous-frontend#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-load-plugins": "^1.4.0",
+    "gulp-merge-media-queries": "^0.2.1",
+    "gulp-pixrem": "^1.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.3.0",
+    "run-sequence": "^1.2.2",
+    "yargs": "^6.6.0"
+  }
+}
