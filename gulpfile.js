@@ -30,6 +30,7 @@ var PATH = {
 gulp.task('browserSync', function() {
   return browserSync.init({
     server: './',
+    index: 'test.html',
     port:   8000,
     notify: false, // boolean value, Toggle notifications of bsync activity.
     open:   false // toggle auotmatic opening of webpage upong bsync starting.

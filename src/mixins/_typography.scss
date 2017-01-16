@@ -1,0 +1,18 @@
+@mixin generate_heading-sizes {
+  // Get keys to the maps.
+  $maps: map-keys($headings_font-sizes);
+  // Loop through maps
+  @each $map in $maps {
+    // Get the map in the map.
+    $media: map-get($headings_font-sizes, $map);
+    $keys: map-keys($media);
+    // Output in a responsive manner.
+    @include mq($map) {
+      @each $key in $keys {
+        #{$key} {
+          font-size: calcRem(map-get($media, $key));
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+// Base Units
+// ----------
+$spacing-unit_base: calcRem(30);
+$spacing-unit_vertical: $spacing-unit_base * 1.5;
+$spacing-unit_vertical-heading: $spacing-unit_base;
+$spacing-unit_vertical-paragraph: $spacing-unit_vertical;
+
+// Breakpoints
+// -----------
+$breakpoints: (
+  sm:  0,
+  md:  640,
+  lg:  1024,
+  xl:  1200,
+  xxl: 1440,
+);
+$active-breakpoints: (
+  sm:  true,
+  md:  true,
+  lg:  true,
+  xl:  true,
+  xxl: true,
+);
+
+// The Grid
+// --------
+$grid_gutter: $spacing-unit_base / 2;
+$grid_container_max-width: calcRem(1200);
+
+
+// Color
+// -----
+$color-palette: (
+  red:    #FF664E,
+  orange: #FF924E,
+  yellow: #FFC74E,
+  green:  #92FF4E,
+  cyan:   #4EE7FF,
+  blue:   #4E86FF,
+  purple: #C84EFF,
+  pink:   #FF4EE2,
+);
+$color-red:          #FF664E;
+$color-orange:       #FF924E;
+$color-yellow:       #FFC74E;
+$color-green:        #92FF4E;
+$color-cyan:         #4EE7FF;
+$color-blue:         #4E86FF;
+$color-purple:       #C84EFF;
+$color-pink:         #FF4EE2;
+$color-white:        #fdfdfd;
+$color-black:        #222;
+$color-grey_lighter: #eee;
+$color-grey_light:   #e5e5e5;
+$color-grey:         silver;
+$color-grey_dark:    #5e5e5e;
+$color-grey_darker:  #333;
+
+
+// Typography
+// ----------
+
+// Base Styles
+$font-size_base:      16px;
+$font-size_small:     ;
+$line-height_base:    1.5;
+// Headings
+$font-heading_family: "Lato", sans-serif;
+$font-heading_weight: 300;
+$font-heading_color:  ;
+$font-heading_color-secondary: ;
+$font-heading_color-tertiary: ;
+$font-heading_base-size: calcRem(80);
+$font-heading_sizes: (
+  sm: (
+    h1: 22,
+    h2: 18,
+    h3: 17,
+    h4: 16,
+    h5: 15,
+    h6: 14,
+  ),
+  md: (
+    h1: 30,
+    h2: 26,
+    h3: 22,
+    h4: 20,
+    h5: 18,
+    h6: 16,
+  ),
+);
+// Body
+$font-body_family:    "Roboto", Helvetica, Arial, sans-serif;
+$font-body_weight:    300;
+$font-body_color:     $color-black;
+// Mono
+$font-family_mono: "Roboto Mono", monospace;
+// Inline Code
+$inline-code_background: ;
+$inline-code_text-color: ;
+$inline-code_padding: ;
+$inline-code_margin: ;
+// Links
+$link-color:       ;
+$link-color_hover: ;
+$link-color_visted:;
+$link-decoration:  ;
+// Lists
+$list-margin_left:        ;
+// Blockquotes
+$blockquote-margin_left:  ;
+$blockquote-border_left:  $color-grey_dark solid 2px;
+$blockquote-padding_left: ;
+// Tables
+$table_background:        $color-grey;
+$table-header_background: $color-grey_dark;
+$table-header_padding:    ;
+$table-cell_padding:      ;
+
+// Buttons
+// -------
+
+// Icons
+// -----

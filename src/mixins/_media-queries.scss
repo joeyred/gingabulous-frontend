@@ -1,1 +1,23 @@
+@mixin mq($_bp) {
+  // Check if passed breakpoint is currently enabled.
+  @if map-get($active-breakpoints, $_bp) {
+    // Get the value of the passed breakpoint.
+    $current-bp: map-get($breakpoints, $_bp);
+    // Generate the Media Query string.
+    $current-media: bp($current-bp);
+    // If `$current-media` is 0, thus false, then just spit the content out with no query,
+    // Else take the value of `$current-media`, use it to make the query, and put the
+    // content inside the query.
+    @if $current-media == false {
+      @content;
+    }
 
+    @else {
+      @media screen and (#{$current-media}) { @content; }
+    }
+  }
+  // If passed breakpoint isnt enabled, throw a warning.
+  @else {
+    @warn '#{$_bp} is not an enabled breakpoint. Please check the $active-breakpoints map in _settings.scss.';
+  }
+}
