@@ -1,0 +1,59 @@
+////
+/// Convert pixels to rems.
+///
+/// @since 0.1.0
+///
+/// @param {Pixel} $size - Pixel value to convert to rems.
+///
+/// @return {Rem} Converted rem value.
+///
+@function calcRem($size) {
+
+  $remSize: $size / 16;
+
+  @return $remSize * 1rem;
+}
+// TODO Document this function.
+@function contains($list, $var) {
+  $_out: false;
+
+  @each $item in $list {
+    @if $item == $var {
+
+      $_out: true;
+    }
+  }
+
+  @return $_out;
+}
+
+////
+/// Remove the unit of a length.
+///
+/// @since 0.1.0
+///
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number}        - Unitless number
+///
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// TODO Document this function.
+@function bp($bp, $min-max: max) {
+
+  $bf: strip-unit($font-size_base);
+  $em: $bp / $bf;
+
+  $media: false;
+
+  @if $em != 0 {
+    $media: '#{$min-max}-width: #{$em}em';
+  }
+
+  @return $media;
+}

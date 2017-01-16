@@ -1,0 +1,108 @@
+@mixin generate_grid-property($prefix, $class, $property, $value) {
+  &.#{$prefix}-#{$class} {
+    #{$property}: #{$value};
+  }
+}
+
+@mixin generate_grid-no-gutters($prefix) {
+  &.#{$prefix}-no-gutters {
+    .block {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@mixin generate_grid-block-order($prefix) {
+  @for $i from 1 through 12 {
+    &.order-#{$prefix}-#{$i} {
+      order: #{$i};
+    }
+  }
+}
+
+@mixin generate_block-widths($prefix) {
+  @for $i from 1 through 12 {
+
+    $fraction: $i / 12;
+    $width: $fraction * 100%;
+
+    &.#{$prefix}-#{$i} {
+      flex: 0 0 $width;
+      max-width: $width;
+    }
+  }
+}
+
+@mixin generate_block-flex($prefix) {
+  @for $i from 1 through 12 {
+    &.#{$prefix}-grow-#{$i} {
+      flex: $i 0 auto;
+    }
+
+    &.#{$prefix}-shrink-#{$i} {
+      flex: 0 $i auto;
+    }
+  }
+}
+
+@mixin generate_query-prefixed-block-styles {
+
+  $keys: map-keys($active-breakpoints);
+
+  @each $key in $keys {
+
+    $is_active: map-get($active-breakpoints, $key);
+
+    @if $is_active {
+      @include mq($key) {
+        @include generate_block-widths($key);
+        @include generate_grid-block-order($key);
+        @include generate_block-flex($key);
+        // $prefix, $class, $property, $value
+        @include generate_grid-property($key, align-top, align-self, flex-start);
+        @include generate_grid-property($key, align-middle, align-self, center);
+        @include generate_grid-property($key, align-bottom, align-self, flex-end);
+      }
+    }
+  }
+}
+
+@mixin generate_query-prefixed-container-styles {
+
+  $keys: map-keys($active-breakpoints);
+
+  @each $key in $keys {
+
+    $is_active: map-get($active-breakpoints, $key);
+
+    @if $is_active {
+      @include mq($key) {
+        // $prefix, $class, $property, $value
+        // Flex Direction
+        @include generate_grid-property($key, row-reverse, flex-direction, row-reverse);
+        @include generate_grid-property($key, col, flex-direction, column);
+        @include generate_grid-property($key, col-reverse, flex-direction, column-reverse);
+        // Flex Wrap
+        @include generate_grid-property($key, wrap, flex-wrap, wrap);
+        @include generate_grid-property($key, nowrap, flex-wrap, nowrap);
+        @include generate_grid-property($key, wrap-reverse, flex-wrap, wrap-reverse);
+        // Align Items
+        @include generate_grid-property($key, align-top, align-items, flex-start);
+        @include generate_grid-property($key, align-middle, align-items, center);
+        @include generate_grid-property($key, align-bottom, align-items, flex-end);
+        // Align content
+        @include generate_grid-property($key, align-left, align-content, flex-start);
+        @include generate_grid-property($key, align-center, align-content, center);
+        @include generate_grid-property($key, align-right, align-content, flex-end);
+        @include generate_grid-property($key, space-between, align-content, space-between);
+        @include generate_grid-property($key, space-around, align-content, space-around);
+        @include generate_grid-property($key, stretch, align-content, stretch);
+        // No Gutter
+        @include generate_grid-no-gutters($key);
+        // Full Width
+        @include generate_grid-property($key, full, max-width, 100%);
+      }
+    }
+  }
+}
