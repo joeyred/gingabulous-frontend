@@ -9,7 +9,62 @@
 
     <link rel="stylesheet" href="build/gingabulous.css">
     <style>
-    
+      .sg-grid .sg-grid-example {
+        margin-bottom: 48.54px;
+        margin-bottom: 3.03375rem;
+      }
+
+      .sg-grid .container.sg-example:nth-child(1) {
+        background: #FF664E;
+      }
+
+      .sg-grid .container.sg-example:nth-child(2) {
+        background: #FF924E;
+      }
+
+      .sg-grid .container.sg-example:nth-child(3) {
+        background: #FFC74E;
+      }
+
+      .sg-grid .container.sg-example:nth-child(4) {
+        background: #92FF4E;
+      }
+
+      .sg-grid .container.sg-example:nth-child(5) {
+        background: #4EE7FF;
+      }
+
+      .sg-grid .container.sg-example:nth-child(6) {
+        background: #4E86FF;
+      }
+
+      .sg-grid .container.sg-example:nth-child(7) {
+        background: #C84EFF;
+      }
+
+      .sg-grid .container.sg-example:nth-child(8) {
+        background: #FF4EE2;
+      }
+
+      .sg-grid .container.sg-example .block {
+        min-height: 30px;
+        text-align: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+      }
+
+      .sg-grid .container.sg-example .block:nth-child(odd) {
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      .sg-grid .container.sg-example .block:nth-child(even) {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      /*.grid-nested-containers .block {
+        min-height: 30px;
+        border: 1px solid #333;
+        padding: 1rem;
+      }*/
     </style>
   </head>
   <body>
@@ -18,9 +73,171 @@
         <!-- Page Title -->
         <div class="block sm-12">
           <h1>This is a Testing Page for This Packages Components</h1>
+          <p>
+            Here is a bit of a kitchen sink of components.
+          </p>
         </div>
+      </div>
+
+      <div class="container">
 
 
+
+        <!-- The Grid -->
+        <div class="block sm-6 sg-grid">
+
+          <div class="sg-grid-example wrapper">
+
+            <div class="container">
+              <div class="block sm-12">
+                <h3>Mixed fixed widths</h3>
+              </div>
+            </div>
+
+            <div class="container sm-no-gutters sg-example">
+              <div class="block sm-4">
+                4
+              </div>
+              <div class="block sm-5">
+                5
+              </div>
+              <div class="block sm-3">
+                3
+              </div>
+            </div>
+
+            <div class="container sm-no-gutters sg-example">
+              <div class="block sm-3">
+                3
+              </div>
+              <div class="block sm-2">
+                2
+              </div>
+              <div class="block sm-7">
+                7
+              </div>
+            </div>
+
+            <div class="container sm-no-gutters sg-example">
+              <div class="block sm-2">
+                2
+              </div>
+              <div class="block sm-8">
+                8
+              </div>
+              <div class="block sm-2">
+                2
+              </div>
+            </div>
+
+            <div class="container sm-no-gutters sg-example">
+              <div class="block sm-1">
+                1
+              </div>
+              <div class="block sm-4">
+                4
+              </div>
+              <div class="block sm-2">
+                2
+              </div>
+              <div class="block sm-4">
+                4
+              </div>
+              <div class="block sm-1">
+                1
+              </div>
+            </div>
+          </div>
+
+          <div class="sg-grid-example wrapper grid-nested-containers">
+
+            <div class="container">
+              <div class="block sm-12">
+                <h3>Nested Containers</h3>
+              </div>
+            </div>
+
+            <!-- <div class="container">
+              <div class="block sm-7">
+                .block.sm-7
+              </div>
+              <div class="block sm-5">
+                .block.sm-5
+              </div>
+              <div class="block sm-8 container">
+                .block.sm-8.container
+                <div class="block">
+                  .block
+                </div>
+                <div class="block sm-4">
+                  .block.sm-4
+                </div>
+              </div>
+              <div class="block">
+                .block
+              </div>
+            </div> -->
+
+            <div class="container sg-example">
+
+              <div class="block sm-7">
+                .block.sm-7
+              </div>
+
+              <div class="block sm-5">
+                .block.sm-5
+              </div>
+            </div>
+            <div class="container sg-example">
+              <div class="block sm-8">
+                .block.sm-8
+
+                <div class="container sg-example">
+
+                  <div class="block">
+                    .block
+                  </div>
+
+                  <div class="block sm-4">
+                    .block.sm-4
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="block">
+                .block
+              </div>
+
+            </div>
+
+          </div>
+
+        </div><!-- GRID EXAMPLE - BLOCK CLOSE -->
+
+
+
+        <!-- Typography -->
+        <div class="block sm-6"></div>
+
+
+
+        <!-- Buttons -->
+        <div class="block sm-6"></div>
+
+
+
+        <!-- Forms -->
+        <div class="block sm-6"></div>
+
+
+
+        <!-- Icons -->
+        <div class="block sm-6"></div>
+
+
+        
       </div>
     </div>
   </body>
