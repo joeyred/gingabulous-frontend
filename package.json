@@ -38,5 +38,10 @@
     "gulp-sourcemaps": "^2.3.0",
     "run-sequence": "^1.2.2",
     "yargs": "^6.6.0"
+  },
+  "stylelint": {
+    "rules": {
+      "function-name-case": "lower"
+    }
   }
 }
