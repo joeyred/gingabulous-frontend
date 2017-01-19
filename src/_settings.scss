@@ -2,7 +2,7 @@
 // ----------
 $spacing-unit_base:               calcRem(30);
 $spacing-unit_vertical:           $spacing-unit_base * 1.5;
-$spacing-unit_vertical-heading:   $spacing-unit_base;
+$spacing-unit_vertical-heading:   $spacing-unit_base / 1.5;
 $spacing-unit_vertical-paragraph: $spacing-unit_vertical;
 
 // Breakpoints
@@ -64,7 +64,7 @@ $font-size_small:     $font-size_base * 0.8;
 $line-height_base:    1.5;
 // Headings
 $font-heading_family: "Lato", sans-serif;
-$font-heading_weight: 700;
+$font-heading_weight: 300;
 $font-heading_color:  $color-purple;
 // $font-heading_color-secondary: ;
 // $font-heading_color-tertiary: ;
@@ -115,6 +115,7 @@ $blockquote-padding_left: 0.5rem;
 // Tables
 $table_background:        $color-grey;
 $table-header_background: $color-grey_dark;
+$table-header_color:      $color-white;
 $table-header_padding:    0.675rem;
 $table-cell_padding:      0.5rem;
 

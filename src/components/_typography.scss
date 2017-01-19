@@ -90,10 +90,9 @@ table {
 
   thead {
     background-color: $table-header_background;
-
-    > tr {
-      background-color: $table-header_background;
-    }
+    color: $table-header_color;
+    font-family: $font-heading_family;
+    font-weight: $font-heading_weight;
 
     th {
       padding: $table-header_padding;
