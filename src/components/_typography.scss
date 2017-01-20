@@ -34,12 +34,29 @@ h6 {
 
 @include generate_heading-sizes;
 
+// Paragraphs
 p {
   margin-bottom: $spacing-unit_vertical-paragraph;
 
   &:last-child {
     margin-bottom: $spacing-unit_vertical;
   }
+}
+
+// Bold
+strong {
+  font-weight: $font-weight_bold;
+  line-height: inherit;
+}
+// Italisized
+em {
+  font-style: italic;
+  line-height: inherit;
+}
+// Small Text
+small {
+  font-size: $font-size_small;
+  line-height: inherit;
 }
 
 // Links
@@ -79,6 +96,7 @@ blockquote {
   border-left: $blockquote-border_left;
   padding-left: $blockquote-padding_left;
 }
+// Citations
 
 // Tables
 table {
