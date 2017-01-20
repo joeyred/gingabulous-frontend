@@ -24,7 +24,7 @@ $active-breakpoints: (
 
 // The Grid
 // --------
-$grid_gutter: $spacing-unit_base / 2;
+$grid_gutter:              $spacing-unit_base / 2;
 $grid_container_max-width: calcRem(1200);
 
 // Color
@@ -59,18 +59,18 @@ $color-grey_darker:  #333;
 // ----------
 
 // Base Styles
-$font-size_base:      100%;
-$font-size_small:     $font-size_base * 0.8;
-$line-height_base:    1.5;
-$font-weight_bold:    700;
+$font-size_base:         100%;
+$font-size_small:        $font-size_base * 0.8;
+$line-height_base:       1.5;
+$font-weight_bold:       700;
 // Headings
-$font-heading_family: "Lato", sans-serif;
-$font-heading_weight: 300;
-$font-heading_color:  $color-purple;
+$font-heading_family:    "Lato", sans-serif;
+$font-heading_weight:    300;
+$font-heading_color:     $color-purple;
 // $font-heading_color-secondary: ;
 // $font-heading_color-tertiary: ;
 $font-heading_base-size: calcRem(80);
-$font-heading_sizes: (
+$font-heading_sizes:     (
   sm: (
     h1: 22,
     h2: 18,
@@ -89,40 +89,41 @@ $font-heading_sizes: (
   ),
 );
 // Body
-$font-body_family:        "Roboto", Helvetica, Arial, sans-serif;
-$font-body_weight:        400;
-$font-body_color:         $color-black;
+$font-body_family:              "Roboto", Helvetica, Arial, sans-serif;
+$font-body_weight:              400;
+$font-body_color:               $color-black;
 // Mono
-$font-family_mono:        "Roboto Mono", monospace;
-$font-weight_mono:        200;
+$font-family_mono:              "Roboto Mono", monospace;
+$font-weight_mono:              200;
 // Inline Code
-$inline-code_background:  $color-grey_darker;
-$inline-code_text-color:  $color-white;
-$inline-code_padding:     0.05rem 0.25rem;
-$inline-code_margin:      0.1rem;
+$inline-code_background:        $color-grey_darker;
+$inline-code_text-color:        $color-white;
+$inline-code_padding:           0.05rem 0.25rem;
+$inline-code_margin:            0.1rem;
 // Links
-$link-color:              $color-purple;
-$link-color_hover:        $color-cyan;
-$link-color_visted:       $color-pink;
-$link-decoration:         none;
+$link-color:                    $color-purple;
+$link-color_hover:              $color-cyan;
+$link-color_visted:             $color-pink;
+$link-decoration:               none;
 // Horizontal Rule
-$horizontal-rule_width:   90%;
-$horizontal-rule_border:  1px $color-grey_dark solid;
-$horizontal-rule_vertical-margin: 0.5rem;
+$horizontal-rule_width:         90%;
+$horizontal-rule_border:        1px $color-grey solid;
+$horizontal-rule_margin-bottom: $spacing-unit_vertical;
 // Lists
-$list_margin-left:        calcRem(16);
-$list_margin-bottom:      $spacing-unit_vertical;
-$list-item_margin-bottom: 0.25rem;
+$list_margin-left:              calcRem(16);
+$list_margin-bottom:            $spacing-unit_vertical;
+$list-item_margin-bottom:       0.25rem;
 // Blockquotes
-$blockquote-margin_left:  0.5rem;
-$blockquote-border_left:  $color-grey_dark solid 2px;
-$blockquote-padding_left: 0.5rem;
+$blockquote_margin-left:        0.5rem;
+$blockquote_border-left:        2px $color-grey_dark solid;
+$blockquote_padding-left:       0.5rem;
+$blockquote_p_margin-bottom:    1rem;
 // Tables
-$table_background:        $color-grey;
-$table-header_background: $color-grey_dark;
-$table-header_color:      $color-white;
-$table-header_padding:    0.675rem;
-$table-cell_padding:      0.5rem;
+$table_background:              $color-grey;
+$table-header_background:       $color-grey_dark;
+$table-header_color:            $color-white;
+$table-header_padding:          0.675rem;
+$table-cell_padding:            0.5rem;
 
 // Buttons
 // -------

@@ -132,12 +132,18 @@ li {
 
 // Blockquotes
 blockquote {
-  margin-left: $blockquote-margin_left;
-  border-left: $blockquote-border_left;
-  padding-left: $blockquote-padding_left;
+  margin-left: $blockquote_margin-left;
+  border-left: $blockquote_border-left;
+  padding-left: $blockquote_padding-left;
+
+  p {
+    margin-bottom: 1rem;
+  }
 }
 // Citations
-
+cite {
+  font-size: $font-size_small;
+}
 // Tables
 table {
   border-collapse: collapse;
