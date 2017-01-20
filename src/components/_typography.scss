@@ -63,6 +63,7 @@ small {
 a {
   color: $link-color;
   text-decoration: $link-decoration;
+  line-height: inherit;
 
   &:hover,
   &:focus {
@@ -72,6 +73,20 @@ a {
   &:visited {
     color: $link-color_visted;
   }
+}
+
+// Horizontal Rule
+hr {
+  width: $horizontal-rule_width;
+  height: 0;
+  border: {
+    right: 0;
+    top: 0;
+    bottom: $horizontal-rule_border;
+    left: 0;
+  }
+
+  margin: $horizontal-rule_vertical-margin auto;
 }
 
 // Lists

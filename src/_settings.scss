@@ -105,6 +105,10 @@ $link-color:              $color-purple;
 $link-color_hover:        $color-cyan;
 $link-color_visted:       $color-pink;
 $link-decoration:         none;
+// Horizontal Rule
+$horizontal-rule_width:   90%;
+$horizontal-rule_border:  1px $color-grey_dark solid;
+$horizontal-rule_vertical-margin: 0.5rem;
 // Lists
 $list_margin-left:        calcRem(16);
 $list_margin-bottom:      $spacing-unit_vertical;
