@@ -110,7 +110,7 @@ hr {
     left: 0;
   }
 
-  margin: $horizontal-rule_vertical-margin auto;
+  margin: 0 auto $horizontal-rule_margin-bottom;
 }
 
 // Lists
