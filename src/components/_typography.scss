@@ -1,0 +1,196 @@
+////
+/// Typography
+///
+/// Basic typography styles to jumpstart a project.
+///
+/// @since 0.1.0
+///
+
+// Typography resets
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: {
+    family: $font-body_family;
+    size: $font-size_base;
+    weight: $font-body_weight;
+  }
+
+  color: $font-body_color;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading_family;
+  font-weight: $font-heading_weight;
+  color: $font-heading_color;
+  margin-top: 0;
+  margin-bottom: $spacing-unit_vertical-heading;
+}
+
+@include generate_heading-sizes;
+
+// Paragraphs
+p {
+  margin-bottom: $spacing-unit_vertical-paragraph;
+
+  &:last-child {
+    margin-bottom: $spacing-unit_vertical;
+  }
+}
+
+// Bold
+strong {
+  font-weight: $font-weight_bold;
+  line-height: inherit;
+}
+// Italisized
+em {
+  font-style: italic;
+  line-height: inherit;
+}
+// Small Text
+small {
+  font-size: $font-size_small;
+  line-height: inherit;
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  line-height: inherit;
+
+  &:hover,
+  &:focus {
+    color: $link-color_hover;
+  }
+
+  &:visited {
+    color: $link-color_visted;
+  }
+}
+
+// Horizontal Rule
+hr {
+  width: $horizontal-rule_width;
+  height: 0;
+  border: {
+    right: 0;
+    top: 0;
+    bottom: $horizontal-rule_border;
+    left: 0;
+  }
+
+  margin: 0 auto $horizontal-rule_margin-bottom;
+}
+
+// Lists
+ul,
+ol {
+  padding-left: $list_margin-left;
+  margin-bottom: $list_margin-bottom;
+}
+
+li {
+  margin-bottom: $list-item_margin-bottom;
+
+  > ul,
+  > ol {
+    // margin-left: $nested-list_margin-left;
+    margin-bottom: 0; // Nested Lists
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin-left: $blockquote_margin-left;
+  border-left: $blockquote_border-left;
+  padding-left: $blockquote_padding-left;
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+// Citations
+cite {
+  font-size: $font-size_small;
+}
+// Tables
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: none;
+  background: $table_background;
+  margin-bottom: $spacing-unit_vertical;
+
+  thead {
+    background-color: $table-header_background;
+    color: $table-header_color;
+    font-family: $font-heading_family;
+    font-weight: $font-heading_weight;
+
+    th {
+      padding: $table-header_padding;
+    }
+  }
+
+  tr {
+    &:nth-child(2n) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  td {
+    padding: $table-cell_padding;
+
+    &:nth-child(2n) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+// Inline Code
+code {
+  border-radius: 0.3rem;
+  padding: $inline-code_padding;
+  margin: {
+    left: $inline-code_margin;
+    right: $inline-code_margin;
+  }
+
+  background: $inline-code_background;
+  color: $inline-code_text-color;
+  line-height: $line-height_base;
+  font-family: $font-family_mono;
+  font-size: $font-size_base;
+  font-weight: $font-weight_mono;
+}

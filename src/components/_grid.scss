@@ -10,8 +10,8 @@
   flex: 1;
   max-width: 100%; // Keep the block respecting its container.
   padding: {
-    left: $gutter;
-    right: $gutter;
+    left: $grid_gutter;
+    right: $grid_gutter;
   }
 
   @include generate_query-prefixed-block-styles;
@@ -27,7 +27,7 @@
   display: flex;
   flex: 0 1 auto;
   flex-flow: row wrap;
-  max-width: $container_max-width;
+  max-width: $grid_container_max-width;
   margin-right: auto;
   margin-left: auto;
 

@@ -1,8 +1,8 @@
 // Base Units
 // ----------
-$spacing-unit_base: calcRem(30);
-$spacing-unit_vertical: $spacing-unit_base * 1.5;
-$spacing-unit_vertical-heading: $spacing-unit_base;
+$spacing-unit_base:               calcRem(30);
+$spacing-unit_vertical:           $spacing-unit_base * 1.5;
+$spacing-unit_vertical-heading:   $spacing-unit_base / 1.5;
 $spacing-unit_vertical-paragraph: $spacing-unit_vertical;
 
 // Breakpoints
@@ -24,30 +24,29 @@ $active-breakpoints: (
 
 // The Grid
 // --------
-$grid_gutter: $spacing-unit_base / 2;
+$grid_gutter:              $spacing-unit_base / 2;
 $grid_container_max-width: calcRem(1200);
-
 
 // Color
 // -----
 $color-palette: (
-  red:    #FF664E,
-  orange: #FF924E,
-  yellow: #FFC74E,
-  green:  #92FF4E,
-  cyan:   #4EE7FF,
-  blue:   #4E86FF,
-  purple: #C84EFF,
-  pink:   #FF4EE2,
+  red:    #ff664e,
+  orange: #ff924e,
+  yellow: #ffc74e,
+  green:  #92ff4e,
+  cyan:   #4ee7ff,
+  blue:   #4e86ff,
+  purple: #c84eff,
+  pink:   #ff4ee2,
 );
-$color-red:          #FF664E;
-$color-orange:       #FF924E;
-$color-yellow:       #FFC74E;
-$color-green:        #92FF4E;
-$color-cyan:         #4EE7FF;
-$color-blue:         #4E86FF;
-$color-purple:       #C84EFF;
-$color-pink:         #FF4EE2;
+$color-red:          #ff664e;
+$color-orange:       #ff924e;
+$color-yellow:       #ffc74e;
+$color-green:        #92ff4e;
+$color-cyan:         #4ee7ff;
+$color-blue:         #4e86ff;
+$color-purple:       #c84eff;
+$color-pink:         #ff4ee2;
 $color-white:        #fdfdfd;
 $color-black:        #222;
 $color-grey_lighter: #eee;
@@ -56,22 +55,22 @@ $color-grey:         silver;
 $color-grey_dark:    #5e5e5e;
 $color-grey_darker:  #333;
 
-
 // Typography
 // ----------
 
 // Base Styles
-$font-size_base:      16px;
-$font-size_small:     ;
-$line-height_base:    1.5;
+$font-size_base:         100%;
+$font-size_small:        $font-size_base * 0.8;
+$line-height_base:       1.5;
+$font-weight_bold:       700;
 // Headings
-$font-heading_family: "Lato", sans-serif;
-$font-heading_weight: 300;
-$font-heading_color:  ;
-$font-heading_color-secondary: ;
-$font-heading_color-tertiary: ;
+$font-heading_family:    "Lato", sans-serif;
+$font-heading_weight:    300;
+$font-heading_color:     $color-purple;
+// $font-heading_color-secondary: ;
+// $font-heading_color-tertiary: ;
 $font-heading_base-size: calcRem(80);
-$font-heading_sizes: (
+$font-heading_sizes:     (
   sm: (
     h1: 22,
     h2: 18,
@@ -90,32 +89,41 @@ $font-heading_sizes: (
   ),
 );
 // Body
-$font-body_family:    "Roboto", Helvetica, Arial, sans-serif;
-$font-body_weight:    300;
-$font-body_color:     $color-black;
+$font-body_family:              "Roboto", Helvetica, Arial, sans-serif;
+$font-body_weight:              400;
+$font-body_color:               $color-black;
 // Mono
-$font-family_mono: "Roboto Mono", monospace;
+$font-family_mono:              "Roboto Mono", monospace;
+$font-weight_mono:              200;
 // Inline Code
-$inline-code_background: ;
-$inline-code_text-color: ;
-$inline-code_padding: ;
-$inline-code_margin: ;
+$inline-code_background:        $color-grey_darker;
+$inline-code_text-color:        $color-white;
+$inline-code_padding:           0.05rem 0.25rem;
+$inline-code_margin:            0.1rem;
 // Links
-$link-color:       ;
-$link-color_hover: ;
-$link-color_visted:;
-$link-decoration:  ;
+$link-color:                    $color-purple;
+$link-color_hover:              $color-cyan;
+$link-color_visted:             $color-pink;
+$link-decoration:               none;
+// Horizontal Rule
+$horizontal-rule_width:         90%;
+$horizontal-rule_border:        1px $color-grey solid;
+$horizontal-rule_margin-bottom: $spacing-unit_vertical;
 // Lists
-$list-margin_left:        ;
+$list_margin-left:              calcRem(16);
+$list_margin-bottom:            $spacing-unit_vertical;
+$list-item_margin-bottom:       0.25rem;
 // Blockquotes
-$blockquote-margin_left:  ;
-$blockquote-border_left:  $color-grey_dark solid 2px;
-$blockquote-padding_left: ;
+$blockquote_margin-left:        0.5rem;
+$blockquote_border-left:        2px $color-grey_dark solid;
+$blockquote_padding-left:       0.5rem;
+$blockquote_p_margin-bottom:    1rem;
 // Tables
-$table_background:        $color-grey;
-$table-header_background: $color-grey_dark;
-$table-header_padding:    ;
-$table-cell_padding:      ;
+$table_background:              $color-grey;
+$table-header_background:       $color-grey_dark;
+$table-header_color:            $color-white;
+$table-header_padding:          0.675rem;
+$table-cell_padding:            0.5rem;
 
 // Buttons
 // -------
