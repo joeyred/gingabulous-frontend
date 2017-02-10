@@ -4,9 +4,18 @@
   }
 }
 
-@mixin generate_grid-no-gutters($prefix) {
-  &.#{$prefix}-no-gutters {
-    .block {
+@mixin generate_grid-no-gutters($prefix, $container: true) {
+  @if $container {
+    &.#{$prefix}-no-gutters {
+      .block {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  @else {
+    &.#{$prefix}-no-gutters {
       padding-left: 0;
       padding-right: 0;
     }
@@ -59,6 +68,7 @@
         @include generate_block-widths($key);
         @include generate_grid-block-order($key);
         @include generate_block-flex($key);
+        @include generate_grid-no-gutters($key, false);
         // $prefix, $class, $property, $value
         @include generate_grid-property($key, align-top, align-self, flex-start);
         @include generate_grid-property($key, align-middle, align-self, center);
